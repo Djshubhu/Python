@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Ads Calculator - Result</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>Status: {{ profit_status }}</p>
+    <p>Net Profit/Loss: ₹{{ '{:,.2f}'.format(profit) }}</p>
+    <p>Profit per Product: ₹{{ '{:,.2f}'.format(profit / num_orders if num_orders > 0 else 0) }}</p>
+    <p>Current ROAS: {{ '{:.2f}'.format(current_roas) }}</p>
+    <p>Required ROAS to break even: {{ '{:.2f}'.format(roas) }}</p>
+</body>
+</html>
